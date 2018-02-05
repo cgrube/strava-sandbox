@@ -1,0 +1,11 @@
+<h1>Hello World</h1>
+
+<%= link_to "Show all", stats_path %>
+
+<%= form_with(url: search_path, local: true) do |form| %>
+  <p>
+    <%= form.label("Stat Name: ") %>
+    <%= form.text_field(:stat_name) %>
+    <%= form.submit("Retrieve Stat") %>
+  </p> 
+<% end %>

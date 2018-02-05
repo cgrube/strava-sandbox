@@ -1,0 +1,6 @@
+require 'http'
+
+class WelcomeController < ApplicationController
+  def index
+  end
+end
