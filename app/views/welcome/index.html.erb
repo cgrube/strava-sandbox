@@ -1,7 +1,10 @@
-<h1>Hello World</h1>
+<h1>Strava-Ski</h1>
 
-<%= link_to "Show all", stats_path %>
+<br/>
+<%= image_tag(@profile['profile'], :alt => "pic missing") %><p>Hello, <%= @profile['firstname'] %>!</p>
+<br/>
 
+View your <%= link_to "most recent stats", stats_path %>, or . . . retrieve a specific stat using the form below . . . 
 <%= form_with(url: search_path, local: true) do |form| %>
   <p>
     <%= form.label("Stat Name: ") %>
