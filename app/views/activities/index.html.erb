@@ -1,0 +1,23 @@
+<h1>All Activities</h1>
+ 
+<table>
+  <tr>
+    <th>Date</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Distance</th>
+  </tr>
+ 
+  <% @activities.each do |value| %>
+    <tr>
+      <td><%= value["start_date"] %></td>
+      <td><%= value["id"] %></td>
+      <td><%= value["name"] %></td>
+      <td><%= value["distance"] %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<%= link_to 'Home', welcome_index_path %>

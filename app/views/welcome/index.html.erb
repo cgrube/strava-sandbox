@@ -1,10 +1,23 @@
 <h1>Strava-Ski</h1>
 
-<br/>
-<%= image_tag(@profile['profile'], :alt => "pic missing") %><p>Hello, <%= @profile['firstname'] %>!</p>
-<br/>
+<br />
+<%= image_tag(@athlete_info["profile_medium"]) %>
+<br />
+<br />
+Username: <%= @athlete_info["username"] %>
+<br />
+Full Name: <%= @athlete_info["firstname"] %> <%= @athlete_info["lastname"] %>
+<br />
+<br />
+<br />
 
-View your <%= link_to "most recent stats", stats_path %>, or . . . retrieve a specific stat using the form below . . . 
+<%= link_to "Show all stats", stats_path %>
+<br />
+<%= link_to "Show all activities", activities_path %>
+
+<br />
+<br />
+
 <%= form_with(url: search_path, local: true) do |form| %>
   <p>
     <%= form.label("Stat Name: ") %>

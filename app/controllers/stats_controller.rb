@@ -9,6 +9,8 @@ class StatsController < ApplicationController
 	# GET Request to strava to get ALL stats for the hardcoded athlete id
 	body = HTTP.get("https://www.strava.com/api/v3/athletes/2665988/stats", :ssl_context => ctx, :params => {:access_token => "397ecd551200ef80d5b67bb3ccdd4cb8edccd01a"})
 	
+	print "body: " + body
+	
 	# parse the JSON response and put it into an Hash instance variable 
 	@stats = JSON.parse(body)
 	
